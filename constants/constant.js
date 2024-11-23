@@ -141,18 +141,18 @@ export  const contactInfo=[
     url: 'https://github.com/rajarya199',
     icon: FaGithub,
   },
+  {
+    title: 'Resume',
+    url: 'https://drive.google.com/file/d/190SvrLBtbltrJtIa0x7MV1UuTc9_FTYL/view?usp=sharing',
+    icon: BsFillPersonLinesFill,
+  },
 ]
 export  const contInfo=[
   {
     title: 'Email',
     url: '/#contact',
     icon: AiOutlineMail,
-  },
-  {
-    title: 'Resume',
-    url: '/resume',
-    icon: BsFillPersonLinesFill,
-  },
+  }
 ]
 
 export const myinfo={
