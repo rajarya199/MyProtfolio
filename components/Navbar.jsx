@@ -1,21 +1,37 @@
 "use client"
 import Link from "next/link";
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+
 import Logo from "../public/assets/logo.png";
+import { contactInfo,contInfo } from "@/constants/constant";
 
 
 const Navbar = () => {
     const [nav,setNav]=useState(false)
+    const[shadow,setShadow]=useState(false)
     const handleNav=()=>{
         setNav(true)
 
     }
+    useEffect(() => {
+      const handleShadow = () => {
+        if (window.scrollY >= 90) {
+          setShadow(true);
+        } else {
+          setShadow(false);
+        }
+      };
+      window.addEventListener('scroll', handleShadow);
+    }, []);
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div  style={{backgroundColor:'#ecf0f3'}}  className={
+      shadow
+        ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
+        : 'fixed w-full h-20 z-[100]'
+    }>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
           src={Logo}
@@ -26,24 +42,21 @@ const Navbar = () => {
         />
 
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{color:"#1f2937"}} className="hidden md:flex">
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/">Home</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">About</Link>
+              <Link href="/#about">About</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Skills</Link>
+              <Link href="/#skills">Skills</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Projects</Link>
+              <Link href="/#projects">Projects</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Resume</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Contact</Link>
+              <Link href="/#contact">Contact</Link>
             </li>
           </ul>
           <div className="md:hidden" onClick={handleNav}>
@@ -78,22 +91,20 @@ const Navbar = () => {
     <div className="py-4 flex flex-col">
       <ul className="uppercase">
         <Link href="/">
-          <li className="py-4 text-sm">Home</li>
+          <li onClick={()=>setNav(false)} className="py-4 text-sm">Home</li>
         </Link>
         <Link href="/#about">
-          <li className="py-4 text-sm">About</li>
+          <li onClick={()=>setNav(false)} className="py-4 text-sm">About</li>
         </Link>
         <Link href="/#skills">
-          <li className="py-4 text-sm">Skills</li>
+          <li onClick={()=>setNav(false)} className="py-4 text-sm">Skills</li>
         </Link>
         <Link href="/#projects">
-          <li className="py-4 text-sm">Projects</li>
+          <li onClick={()=>setNav(false)} className="py-4 text-sm">Projects</li>
         </Link>
-        <Link href="/resume">
-          <li className="py-4 text-sm">Resume</li>
-        </Link>
+     
         <Link href="/#contact">
-          <li className="py-4 text-sm">Contact</li>
+          <li onClick={()=>setNav(false)} className="py-4 text-sm">Contact</li>
         </Link>
       </ul>
 
@@ -103,32 +114,33 @@ const Navbar = () => {
           Let&#39;s Connect
         </p>
         <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-          <a
-            href="https://www.linkedin.com/in"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <FaLinkedinIn />
-            </div>
-          </a>
-          <a href="https://github.com/" 
-          target="_blank"
-          rel="noreferrer">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <FaGithub/>
-            </div>
-          </a>
-          <a href="mailto:example@gmail.com">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <AiOutlineMail />
-            </div>
-          </a>
-          <Link href="/resume">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <BsFillPersonLinesFill />
-            </div>
-          </Link>
+        {contactInfo.map((contact, index) => (
+              <a
+                key={index}
+                href={contact.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={contact.title}
+              >
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <contact.icon className="w-6 h-6" />
+                        </div>
+                
+              </a>
+            ))}
+            {contInfo.map((cont,index)=>(
+              <Link
+              key={index}
+              href={cont.url}
+              aria-label={cont.title}
+            >
+                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300'>
+                         <cont.icon   />
+                      </div>
+             
+            </Link>
+            ))}
+        
         </div>
       </div>
     </div>
