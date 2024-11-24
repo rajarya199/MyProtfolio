@@ -24,6 +24,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
        <head>
        <link rel="icon"  href="/assets/logo1.png" />
+       <link rel="icon" type="image/x-icon" href="/logo2.ico" />
+
       
       </head>
       <body
