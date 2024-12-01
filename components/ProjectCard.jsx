@@ -9,7 +9,7 @@ const ProjectCard = () => {
       {myproj.map((proj, index) => (
         <div
           key={index}
-          className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]"
+          className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] dark:shadow-gray-950"
         >
           {/* Image Container */}
           <div className="relative w-full h-full rounded-xl overflow-hidden">

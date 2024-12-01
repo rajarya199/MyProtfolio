@@ -10,7 +10,10 @@ html {
 }
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply bg-white text-[#1f2937] tracking-wide
+  }
+  .dark body {
+    @apply bg-[#1f2937] text-[#ecf0f3];
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold
@@ -27,8 +30,14 @@ html {
   li {
     @apply cursor-pointer
   }
-
+  
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
   }
+  .dark button{
+      @apply shadow-xl shadow-gray-800 rounded-xl uppercase bg-gradient-to-r from-[#0f172a] to-[#1e40af] text-white;
+    }
+    
+  
+ 
 }

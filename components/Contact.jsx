@@ -63,13 +63,13 @@ const Contact = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+        <p className='text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#818cf8]'>
           Contact
         </p>
         <h2 className='py-4'>Get In Touch</h2>
         <div className='grid lg:grid-cols-5 gap-8'>
           {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4  dark:shadow-gray-950'>
             <div className='lg:p-4 h-full '>
               <div>
                 <Image
@@ -97,7 +97,7 @@ const Contact = () => {
                 rel="noreferrer"
                 aria-label={contact.title}
               >
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-950'>
                             <contact.icon className="w-6 h-6" />
                         </div>
                 
@@ -109,7 +109,7 @@ const Contact = () => {
               href={cont.url}
               aria-label={cont.title}
             >
-                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 dark:shadow-gray-950'>
                          <cont.icon   />
                       </div>
              
@@ -122,7 +122,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4 dark:shadow-gray-950'>
             <div className='p-4'>
               <form
                 onSubmit={handleSubmit}
@@ -196,7 +196,7 @@ const Contact = () => {
         <div className='flex justify-center py-12'>
           <Link href='/'>
             
-              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300  dark:shadow-gray-950'>
                 <HiOutlineChevronDoubleUp
                   className='text-[#5651e5]'
                   size={30}
