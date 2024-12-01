@@ -15,8 +15,10 @@ import c from '../public/assets/skill/c.png'
 import cp from '../public/assets/skill/c++.png'
 import bootstrap from '../public/assets/skill/bootstrap.png'
 import pj1 from '../public/assets/project/pj1.png'
+import ntfx from '../public/assets/project/ntfx.png'
 import htl1 from  '../public/assets/project/htl1.png'
 import qr from  '../public/assets/project/qr1.png'
+import bookstr from  '../public/assets/project/bookstr1.png'
 import todo from  '../public/assets/project/todo.png'
 import Ecom from  '../public/assets/project/E-com.png'
 import usermng from '../public/assets/project/usermng.png'
@@ -107,6 +109,30 @@ export const myproj=[
     info:' user can search  hotelroom according to their requirement and book at their ease.'
   },
   {
+    title:"User Management System",
+    pic:usermng,
+    tech:'MERN Stack',
+    url:'https://github.com/rajarya199/Simple-UserManaagement-CRUD-system-Using-MERN',
+    info:' Create,add Edit ,delete the user Information'
+  },
+  
+
+ 
+  {
+    title:"Book Store",
+    pic:bookstr,
+    tech:'MERN Stack',
+    url:'https://github.com/rajarya199/BookStore-Mern',
+    info:' Store your book, Create,add Edit ,delete books info.'
+  },
+  {
+    title:"Netflix Ui clone ",
+    pic:ntfx,
+    tech:'HTML,CSS',
+    url:'https://github.com/rajarya199/Netflix-UI-Clone-using-html-css',
+    info:' Netflix page clone using html ,css '
+  },
+  {
     title:" Todo list",
     pic:todo,
     tech:'ReactJs,js',
@@ -120,13 +146,7 @@ export const myproj=[
     url:'https://github.com/rajarya199/QR-code-generator',
     info:' convert any text/image url into img and downlaod it'
   },
-  {
-    title:"User Management System",
-    pic:usermng,
-    tech:'MERN Stack',
-    url:'https://github.com/rajarya199/Simple-UserManaagement-CRUD-system-Using-MERN',
-    info:' Create,add Edit ,delete the user Information'
-  },
+ 
 ]
 
 export  const contactInfo=[
