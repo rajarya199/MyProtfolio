@@ -13,6 +13,9 @@ import redux from '../public/assets/skill/redux.png';
 import next from '../public/assets/skill/nextjs.png';
 import c from '../public/assets/skill/c.png'
 import cp from '../public/assets/skill/c++.png'
+import prisma from '../public/assets/skill/prisma.png'
+import shadcn from '../public/assets/skill/shadcnui.png'
+
 import bootstrap from '../public/assets/skill/bootstrap.png'
 import pj1 from '../public/assets/project/pj1.png'
 import ntfx from '../public/assets/project/ntfx.png'
@@ -81,9 +84,13 @@ export const myskill = [
     pic: cp,
   },
   {
-    title: 'NextJs',
-    pic: next,
+    title: 'Prisma',
+    pic: prisma,
   },
+  {
+    title: 'ShadCn',
+    pic: shadcn,
+  }
  
 ];
 
