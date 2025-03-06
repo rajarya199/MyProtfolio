@@ -25,7 +25,7 @@ const ProjectCard = () => {
           <div className="hidden group-hover:flex absolute inset-0 flex-col justify-center items-center text-center space-y-3 bg-black/70 rounded-xl">
             <h3 className="text-xl text-white tracking-wider">{proj.title}</h3>
             <p className="text-white text-sm">{proj.tech}</p>
-            <p className="text-white text-sm px-4 truncate">{proj.info}</p>
+            <p className="text-white text-sm px-4 ">{proj.info}</p>
             <a href={proj.url} target="_blank" rel="noreferrer">
               <p className="text-center py-3 px-4 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
                 More Info

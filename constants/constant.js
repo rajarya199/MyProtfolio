@@ -22,6 +22,7 @@ import bookstr from  '../public/assets/project/bookstr1.png'
 import todo from  '../public/assets/project/todo.png'
 import Ecom from  '../public/assets/project/E-com.png'
 import usermng from '../public/assets/project/usermng.png'
+import event from '../public/assets/project/evnt2.png'
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -87,6 +88,13 @@ export const myskill = [
 ];
 
 export const myproj=[
+  {
+    title:" Event Management System",
+    pic:event,
+    tech:'Next Js,Ts,Neon DB, ShadCn, Tailwind,Prisma,Leaflet,Clerk',
+    url:"https://eventmanagent1.vercel.app/",
+    info:'CRUD the event ,User can add their event to publish,advertise here,Ticket booking system with payment gateway'
+  },
   {
     title:" Room Sharing and Rental System",
     pic:pj1,
