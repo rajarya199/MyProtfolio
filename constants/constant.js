@@ -28,6 +28,8 @@ import Ecom from  '../public/assets/project/E-com.png'
 import ecomm from '../public/assets/project/ecommerce.png'
 import usermng from '../public/assets/project/usermng.png'
 import event from '../public/assets/project/evnt2.png'
+import event1 from '../public/assets/project/event1.png'
+
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -99,49 +101,106 @@ export const myskill = [
 export const myprojects = [
   {
     id: 1,
-    name: 'E-Commerce Platform',
+    name: "Event Management System",
     description:
-      'A full-featured e-commerce platform built with React and Node.js. Includes user authentication, product catalog, shopping cart, and payment integration.',
-    image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/username/ecommerce',
-    liveUrl: 'https://ecommerce-demo.com',
+      "A web application that enables users to create, manage, and promote events online. Features include full CRUD operations for events, event publishing and advertising, a ticket booking system, and integrated payment gateway. Built with Next.js, TypeScript, Neon DB, ShadCn, Tailwind, Prisma, Leaflet, and Clerk.",
+    image: event1,
+    tags: [
+      "Next Js",
+      "Ts",
+      "Neon DB",
+      "ShadCn",
+      "Tailwind",
+      "Prisma",
+      "Leaflet",
+      "Clerk"
+    ],
+    githubUrl: "",
+    liveUrl: "https://eventmanagent1.vercel.app/"
   },
   {
     id: 2,
-    name: 'Weather Dashboard',
+    name: "Room Sharing and Rental System",
     description:
-      'Real-time weather application that displays current conditions and forecasts for any location. Features interactive maps and data visualization.',
-    image:
-      'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-    tags: ['JavaScript', 'API', 'CSS', 'Chart.js'],
-    githubUrl: 'https://github.com/username/weather-app',
-    liveUrl: 'https://weather-dashboard-demo.com',
+      "A platform for finding roommates and renting properties. Users can search for tenants to share rooms or list properties for rent. Built using React, Node.js, MongoDB, and ExpressJS.",
+    image: pj1,
+    tags: ["React", "Node.js", "MongoDB", "ExpressJS"],
+    githubUrl: "https://github.com/rajarya199/minor-project",
+    liveUrl: ""
   },
   {
     id: 3,
-    name: 'Task Management App',
+    name: "E-commerce",
     description:
-      'A productivity application for organizing tasks, projects, and deadlines. Features include drag-and-drop interfaces, notifications, and team collaboration.',
-    image:
-      'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-    tags: ['React', 'Firebase', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/task-manager',
-    liveUrl: 'https://task-app-demo.com',
+      "An online shopping platform allowing users to browse and purchase products. Features include product catalog, shopping cart, and order management. Built with React, Node.js, MongoDB, and ExpressJS.",
+    image: ecomm,
+    tags: ["React", "Node.js", "MongoDB", "ExpressJS"],
+    githubUrl: "https://github.com/rajarya199/E-commerce-",
+    liveUrl: ""
   },
   {
     id: 4,
-    name: 'Portfolio Website',
+    name: "Hotel's Room Booking System",
     description:
-      'A personal portfolio website showcasing projects and skills. Features responsive design, dark mode, and contact form integration.',
-    image:
-      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-    tags: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
-    githubUrl: 'https://github.com/username/portfolio',
-    liveUrl: 'https://portfolio-demo.com',
+      "A booking system for hotel rooms that helps users search and reserve accommodations based on their preferences. Features include room search, booking, and responsive UI. Built with React, Node.js, MongoDB, ExpressJS, and Tailwind.",
+    image: htl1,
+    tags: ["React", "Node.js", "MongoDB", "ExpressJS", "Tailwind"],
+    githubUrl: "https://github.com/rajarya199/BookMyHotel",
+    liveUrl: ""
   },
-]
+  {
+    id: 5,
+    name: "User Management System",
+    description:
+      "A CRUD application for managing user information in a database. Users can create, add, edit, and delete user records. Built using the MERN Stack.",
+    image: usermng,
+    tags: ["MERN Stack"],
+    githubUrl: "https://github.com/rajarya199/Simple-UserManaagement-CRUD-system-Using-MERN",
+    liveUrl: ""
+  },
+  {
+    id: 6,
+    name: "Book Store",
+    description:
+      "A digital library system for managing book collections. Users can add, edit, and delete book information. Built using the MERN Stack.",
+    image: bookstr,
+    tags: ["MERN Stack"],
+    githubUrl: "https://github.com/rajarya199/BookStore-Mern",
+    liveUrl: ""
+  },
+  {
+    id: 7,
+    name: "Netflix UI Clone",
+    description:
+      "A static web page replicating the Netflix homepage design. Built using HTML and CSS for layout and styling.",
+    image: ntfx,
+    tags: ["HTML", "CSS"],
+    githubUrl: "https://github.com/rajarya199/Netflix-UI-Clone-using-html-css",
+    liveUrl: ""
+  },
+  {
+    id: 8,
+    name: "Todo List",
+    description:
+      "A productivity app for tracking daily tasks and to-dos. Users can add, edit, and manage their task list. Built with ReactJS and JavaScript.",
+    image: todo,
+    tags: ["ReactJS", "JavaScript"],
+    githubUrl: "https://github.com/rajarya199/Todo-list-React",
+    liveUrl: ""
+  },
+  {
+    id: 9,
+    name: "QR-Code Generator",
+    description:
+      "A tool for generating QR codes from text or image URLs. Users can convert input into a QR image and download it. Built with HTML, CSS, and JavaScript.",
+    image: qr,
+    tags: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/rajarya199/QR-code-generator",
+    liveUrl: ""
+  }
+];
+
+
 
 export const myproj=[
   {
