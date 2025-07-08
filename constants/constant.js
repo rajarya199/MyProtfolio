@@ -17,6 +17,7 @@ import prisma from '../public/assets/skill/prisma.png'
 import shadcn from '../public/assets/skill/shadcnui.png'
 
 import bootstrap from '../public/assets/skill/bootstrap.png'
+
 import pj1 from '../public/assets/project/pj1.png'
 import ntfx from '../public/assets/project/ntfx.png'
 import htl1 from  '../public/assets/project/htl1.png'
@@ -24,6 +25,7 @@ import qr from  '../public/assets/project/qr1.png'
 import bookstr from  '../public/assets/project/bookstr1.png'
 import todo from  '../public/assets/project/todo.png'
 import Ecom from  '../public/assets/project/E-com.png'
+import ecomm from '../public/assets/project/ecommerce.png'
 import usermng from '../public/assets/project/usermng.png'
 import event from '../public/assets/project/evnt2.png'
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -93,6 +95,53 @@ export const myskill = [
   }
  
 ];
+
+export const myprojects = [
+  {
+    id: 1,
+    name: 'E-Commerce Platform',
+    description:
+      'A full-featured e-commerce platform built with React and Node.js. Includes user authentication, product catalog, shopping cart, and payment integration.',
+    image:
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    githubUrl: 'https://github.com/username/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+  },
+  {
+    id: 2,
+    name: 'Weather Dashboard',
+    description:
+      'Real-time weather application that displays current conditions and forecasts for any location. Features interactive maps and data visualization.',
+    image:
+      'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    tags: ['JavaScript', 'API', 'CSS', 'Chart.js'],
+    githubUrl: 'https://github.com/username/weather-app',
+    liveUrl: 'https://weather-dashboard-demo.com',
+  },
+  {
+    id: 3,
+    name: 'Task Management App',
+    description:
+      'A productivity application for organizing tasks, projects, and deadlines. Features include drag-and-drop interfaces, notifications, and team collaboration.',
+    image:
+      'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    tags: ['React', 'Firebase', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/username/task-manager',
+    liveUrl: 'https://task-app-demo.com',
+  },
+  {
+    id: 4,
+    name: 'Portfolio Website',
+    description:
+      'A personal portfolio website showcasing projects and skills. Features responsive design, dark mode, and contact form integration.',
+    image:
+      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    tags: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
+    githubUrl: 'https://github.com/username/portfolio',
+    liveUrl: 'https://portfolio-demo.com',
+  },
+]
 
 export const myproj=[
   {
