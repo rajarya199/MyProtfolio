@@ -17,7 +17,7 @@ import prisma from '../public/assets/skill/prisma.png'
 import shadcn from '../public/assets/skill/shadcnui.png'
 
 import bootstrap from '../public/assets/skill/bootstrap.png'
-
+import filedrive from'../public/assets/project/filedrive.png'
 import pj1 from '../public/assets/project/pj1.png'
 import ntfx from '../public/assets/project/ntfx.png'
 import htl1 from  '../public/assets/project/htl1.png'
@@ -118,18 +118,8 @@ export const myprojects = [
     githubUrl: "",
     liveUrl: "https://eventmanagent1.vercel.app/"
   },
-  {
-    id: 2,
-    name: "Room Sharing and Rental System",
-    description:
-      "A platform for finding roommates and renting properties. Users can search for tenants to share rooms or list properties for rent. Built using React, Node.js, MongoDB, and ExpressJS.",
-    image: pj1,
-    tags: ["React", "Node.js", "MongoDB", "ExpressJS"],
-    githubUrl: "https://github.com/rajarya199/minor-project",
-    liveUrl: ""
-  },
-  {
-    id: 3,
+   {
+    id: 4,
     name: "E-commerce",
     description:
       "An online shopping platform allowing users to browse and purchase products. Features include product catalog, shopping cart, and order management. Built with React, Node.js, MongoDB, and ExpressJS.",
@@ -138,8 +128,30 @@ export const myprojects = [
     githubUrl: "https://github.com/rajarya199/E-commerce-",
     liveUrl: ""
   },
+ 
   {
+    id: 3,
+    name: "Room Sharing and Rental System",
+    description:
+      "A platform for finding roommates and renting properties. Users can search for tenants to share rooms or list properties for rent. Built using React, Node.js, MongoDB, and ExpressJS.",
+    image: pj1,
+    tags: ["React", "Node.js", "MongoDB", "ExpressJS"],
+    githubUrl: "https://github.com/rajarya199/minor-project",
+    liveUrl: ""
+  },
+    {
     id: 4,
+    name: "File Drive Storage & Management System",
+    description:
+      "A full-stack file management system built with Next.js, TypeScript, Appwrite, TailwindCSS, and ShadCN. It allows users to upload, store, share, and manage different types of files securely. Features include file upload, file sharing, user authentication with OTP login, file search, sorting, renaming, and deletion.",
+    image: filedrive,
+    tags: ["Next.js", "TailwindCSS", "Appwrite", "TypeScript", "ShadCN"],
+    githubUrl: "https://github.com/rajarya199/FileManagement_Drive_NEXT.JS_AppWrite_Tailwind_V4_",
+    liveUrl: "https://filemanagementdrive.vercel.app"
+  },
+ 
+  {
+    id: 5,
     name: "Hotel's Room Booking System",
     description:
       "A booking system for hotel rooms that helps users search and reserve accommodations based on their preferences. Features include room search, booking, and responsive UI. Built with React, Node.js, MongoDB, ExpressJS, and Tailwind.",
@@ -149,7 +161,7 @@ export const myprojects = [
     liveUrl: ""
   },
   {
-    id: 5,
+    id: 6,
     name: "User Management System",
     description:
       "A CRUD application for managing user information in a database. Users can create, add, edit, and delete user records. Built using the MERN Stack.",
@@ -159,7 +171,7 @@ export const myprojects = [
     liveUrl: ""
   },
   {
-    id: 6,
+    id: 7,
     name: "Book Store",
     description:
       "A digital library system for managing book collections. Users can add, edit, and delete book information. Built using the MERN Stack.",
@@ -169,7 +181,7 @@ export const myprojects = [
     liveUrl: ""
   },
   {
-    id: 7,
+    id: 8,
     name: "Netflix UI Clone",
     description:
       "A static web page replicating the Netflix homepage design. Built using HTML and CSS for layout and styling.",
@@ -179,7 +191,7 @@ export const myprojects = [
     liveUrl: ""
   },
   {
-    id: 8,
+    id: 9,
     name: "Todo List",
     description:
       "A productivity app for tracking daily tasks and to-dos. Users can add, edit, and manage their task list. Built with ReactJS and JavaScript.",
@@ -189,7 +201,7 @@ export const myprojects = [
     liveUrl: ""
   },
   {
-    id: 9,
+    id: 10,
     name: "QR-Code Generator",
     description:
       "A tool for generating QR codes from text or image URLs. Users can convert input into a QR image and download it. Built with HTML, CSS, and JavaScript.",
@@ -197,7 +209,8 @@ export const myprojects = [
     tags: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/rajarya199/QR-code-generator",
     liveUrl: ""
-  }
+  },
+ 
 ];
 
 
