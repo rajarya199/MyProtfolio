@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import { ProjectsCard } from './ProjectsCard';
 
 const Project = () => {
   return (
@@ -11,7 +12,8 @@ const Project = () => {
         </p>
         <h2 className='py-4'>What I&apos;ve Built</h2>
         <div >
-            <ProjectCard/>
+            {/* <ProjectCard/> */}
+            <ProjectsCard/>
         </div>
       </div>
     </div>
