@@ -8,7 +8,7 @@ import { contInfo,myinfo } from '@/constants/constant';
 const Main = () => {
   
   return (
-    <div id="home" className="w-full  h-screen text-center">
+    <div id="home" className="w-full  h-screen pt-10 text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-4  flex justify-center items-center">
         <div>
           <p className={`uppercase text-sm tracking-widest mt-10  text-gray-60 dark:text-[#ecf0f3]"} ` }>
