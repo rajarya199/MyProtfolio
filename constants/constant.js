@@ -344,3 +344,28 @@ export const myinfo={
   about1:'From a young age, I have been fascinated by the power of technology to transform the way we live and work. This fascination led me to pursue a degree in Computer Science, where I gained a solid foundation in programming languages, algorithms, and software engineering principles. I recently graduated from National College of Engineering,IOE,TU with a degree in Computer Engineering. During my academic career, I have gained proficiency in a variety of programming languages and technologies, including HTML, CSS, C,C++.JavaScript, React, Node.js, and MongoDB. I have also completed several projects that have given me practical experience in both front-end and back-end development',
   about2:" Hardworking and dedicated Computer Science Engineering Student seeking employment, with a strong interest in full-stack development particularly in React.js and Node.js technologies. Proficient in the MERN stack with hands-on experience in building web applications. Ready to utilize my skills and passion to further the mission of a company andcontribute to projects."
 }
+
+ export const education = [
+  {
+    id: 1,
+    institution: 'National College of Engineering, IOE, TU',
+    degree: 'Computer Engineering',
+    year: '2019-2014',
+    description:
+      'Graduated with a strong foundation in computer science and engineering principles. Completed coursework in web development, algorithms, databases, and software development.',},
+  {
+    id: 2,
+    institution: 'Everest Boarding Secondary School',
+    degree: '+2 in Science',
+    year: '2017-2019',
+    description:
+      'Completed higher secondary education on science stream including physics, chemistry, and mathematics. Developed analytical and problem-solving skills through rigorous coursework and laboratory work.',},
+  {
+    id: 3,
+    institution: 'Shree Sungabha Public School',
+    degree: 'S.E.E',
+    year: '2016',
+    description:
+      'Successfully completed the School Leaving Certificate (SLC) examination, demonstrating proficiency in core subjects such as mathematics,optional math, science, social studies, and English. Gained a solid academic foundation for further studies.',
+    },
+]
