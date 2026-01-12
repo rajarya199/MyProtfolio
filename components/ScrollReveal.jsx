@@ -2,17 +2,36 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
+
+const presets = {
+  heading: {
+    y: 24,
+    duration: 0.6,
+  },
+  subheading: {
+    y: 20,
+    duration: 0.6,
+  },
+  content: {
+    y: 40,
+    duration: 0.8,
+  },
+}
+
 export function ScrollReveal({
   children,
   width = 'fit-content',
   delay = 0,
   className = '',
+   preset = 'content', // heading | subheading | content
 }) {
   const ref = useRef(null)
   const isInView = useInView(ref, {
     once: true,
     margin: '-10% 0px -10% 0px',
   })
+    const { y, duration } = presets[preset]
+
   return (
     <div
       ref={ref}
@@ -22,21 +41,12 @@ export function ScrollReveal({
       className={className}
     >
       <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 50,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
+     
+       initial={{ opacity: 0, y }}
+animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
         transition={{
-          duration: 0.8,
-          delay: delay,
+          duration,
+          delay,
           ease: [0.22, 1, 0.36, 1],
         }}
       >
