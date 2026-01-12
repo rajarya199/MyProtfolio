@@ -2,9 +2,11 @@ import React from 'react'
 import { myprojects } from '@/constants/constant'
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react'
 import Image from 'next/image'
+import { ScrollReveal } from './ScrollReveal'
 export const ProjectsCard = ( ) => {
   return (
 <div className='w-full'>
+  <ScrollReveal preset='content' width='100%'>
   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8' >
         {myprojects.map((project,index)=>(
  <div key={index} className="h-96 w-full relative group rounded-xl overflow-hidden shadow-lg">
@@ -70,6 +72,8 @@ export const ProjectsCard = ( ) => {
         ))}
  
     </div>
+  </ScrollReveal>
+
 </div>
   
    
