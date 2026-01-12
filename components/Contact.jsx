@@ -8,6 +8,7 @@ import { myinfo } from '@/constants/constant';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg';
 import { contactInfo,contInfo } from '@/constants/constant';
+import { ScrollReveal } from './ScrollReveal';
 
 const Contact = () => {
     const [loading, setLoading] = useState(false);
@@ -63,10 +64,15 @@ const Contact = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#818cf8]'>
+        <ScrollReveal preset='heading'>
+ <p className='text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#818cf8]'>
           Contact
         </p>
-        <h2 className='py-4'>Get In Touch</h2>
+        </ScrollReveal>
+       <ScrollReveal preset='subheading'>
+ <h2 className='py-4'>Get In Touch</h2>
+       </ScrollReveal>
+       
         <div className='grid lg:grid-cols-5 gap-8'>
           {/* left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4  dark:shadow-gray-950'>
