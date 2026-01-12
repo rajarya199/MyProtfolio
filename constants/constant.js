@@ -346,22 +346,29 @@ export const myinfo={
 }
 
  export const education = [
-  {
+    {
     id: 1,
+    institution: 'Going Genius Group of Company',
+    degree: 'Web Developer Intern (Next.js)',
+    year: 'Dec 2024 - Present',
+    description: 'Developed and maintained web applications using Next.js and TypeScript. Collaborated on team projects including an E-commerce POS system for physical/virtual products; built individual Event Management system with Prisma, Shadcn, Leaflet Maps, Stripe, and Neon. Applied project management, design thinking, problem-solving, and Agile-Scrum methodologies.',
+  },
+  {
+    id: 2,
     institution: 'National College of Engineering, IOE, TU',
     degree: 'Computer Engineering',
-    year: '2019-2014',
+    year: '2019-2024',
     description:
       'Graduated with a strong foundation in computer science and engineering principles. Completed coursework in web development, algorithms, databases, and software development.',},
   {
-    id: 2,
+    id: 3,
     institution: 'Everest Boarding Secondary School',
     degree: '+2 in Science',
     year: '2017-2019',
     description:
       'Completed higher secondary education on science stream including physics, chemistry, and mathematics. Developed analytical and problem-solving skills through rigorous coursework and laboratory work.',},
   {
-    id: 3,
+    id: 4,
     institution: 'Shree Sungabha Public School',
     degree: 'S.E.E',
     year: '2016',
