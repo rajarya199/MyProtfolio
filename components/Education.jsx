@@ -11,7 +11,7 @@ const Education = () => {
   return (
     <section id="education" className="py-32 px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
-        <ScrollReveal>
+        <ScrollReveal preset="heading">
           <h2 className="text-4xl md:text-6xl font-serif mb-16 text-gray-900 dark:text-gray-100">
             Education & <br />
             Experience
@@ -20,7 +20,7 @@ const Education = () => {
 
         <div className="relative border-l border-gray-300 dark:border-gray-700 ml-3 md:ml-0 md:pl-12 space-y-12">
           {education.map((item) => (
-            <ScrollReveal key={item.id} width="100%">
+            <ScrollReveal preset='content' key={item.id} width="100%" delay={item.id * 0.05}>
               <div
                 className="relative pl-8 md:pl-0 group cursor-pointer"
                 onClick={() =>
