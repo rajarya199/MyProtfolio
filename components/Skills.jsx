@@ -1,15 +1,23 @@
 import React from 'react'
 import { myskill } from '@/constants/constant'
 import Image from 'next/image'
+import { ScrollReveal } from './ScrollReveal'
 const Skills = () => {
   return (
     <div id='skills' className='w-full  p-2  '>
            <div className='max-w-[1240px]  mx-auto flex flex-col justify-center h-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#818cf8]'>
+                    <ScrollReveal preset='heading'>
+                        <p className='text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#818cf8]'>
           Skills
         </p>
-        <h2 className='py-4'>What I Can Do</h2>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+                      </ScrollReveal>
+            
+      <ScrollReveal preset='subheading'>
+<h2 className='py-4'>What I Can Do</h2>
+      </ScrollReveal>
+        
+        <ScrollReveal preset='content' width='100%'>
+            <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
             {myskill.map((item,index)=>(
                  <div key={index} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300  dark:shadow-gray-900'>
                  <div className='grid grid-cols-2 gap-4 justify-center items-center'>
@@ -26,6 +34,8 @@ const Skills = () => {
             ) }
        
         </div>
+          </ScrollReveal>
+      
         </div>
 
 
