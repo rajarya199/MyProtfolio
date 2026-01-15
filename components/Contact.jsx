@@ -12,6 +12,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 const Contact = () => {
     const [loading, setLoading] = useState(false);
+const [errors, setErrors] = useState({});
 
     const [form,setForm]=useState({
         name:'',
@@ -20,47 +21,84 @@ const Contact = () => {
         email:'',
         message:''
     })
+
+    const validate = () => {
+  const newErrors = {};
+
+  if (!form.name.trim()) {
+    newErrors.name = "Name is required";
+  }
+
+  if (!form.email.trim()) {
+    newErrors.email = "Email is required";
+  } else if (
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
+  ) {
+    newErrors.email = "Invalid email address";
+  }
+
+  if (!form.subject.trim()) {
+    newErrors.subject = "Subject is required";
+  }
+
+  if (!form.message.trim()) {
+    newErrors.message = "Message is required";
+  }
+
+  if (form.phone && !/^[0-9+\-\s]{7,15}$/.test(form.phone)) {
+    newErrors.phone = "Invalid phone number";
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
     const handleChange=(e)=>{
         const {name,value}=e.target;
         setForm({...form, [name]:value})
 
     }
-    const handleSubmit=(e)=>{
-        e.preventDefault()
-        setLoading(true);
+  const handleSubmit = (e) => {
+  e.preventDefault();
 
-        emailjs.send(
-            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-            {
-                from_name:form.name,
-                to_name:'Rajan',
-                from_email:form.email,
-                message:form.message,
-                subject:form.subject,
-                phone:form.phone, 
-            },
-            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-        )
-        .then(()=>{
-            setLoading(false);
-            alert("Thank you. I will get back to you as soon as possible.");
-  
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-              subject:"",
-              phone:""
-            });
-        },
-    (error)=>{
-        setLoading(false);
-        console.error(error);
-    
-        alert("Ahh, something went wrong. Please try again.");
+  if (!validate()) return;
+
+  setLoading(true);
+
+  emailjs
+    .send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "Rajan",
+        from_email: form.email,
+        message: form.message,
+        subject: form.subject,
+        phone: form.phone,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setLoading(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
     })
-    }
+    .catch((error) => {
+      setLoading(false);
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    });
+};
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -144,6 +182,10 @@ const Contact = () => {
               value={form.name} 
               onChange={handleChange}
                     />
+                    {errors.name && (
+  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+)}
+
                   </div>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>
@@ -157,6 +199,10 @@ const Contact = () => {
                       onChange={handleChange}
 
                     />
+                    {errors.phone && (
+  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+)}
+
                   </div>
                 </div>
                 <div className='flex flex-col py-2'>
@@ -169,6 +215,10 @@ const Contact = () => {
                     onChange={handleChange}
 
                   />
+                  {errors.email && (
+  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+)}
+
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Subject</label>
@@ -180,6 +230,10 @@ const Contact = () => {
                     value={form.subject}
 
                   />
+                  {errors.subject && (
+  <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
+)}
+
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
@@ -190,11 +244,20 @@ const Contact = () => {
                     onChange={handleChange}
                         value={form.message}
                   ></textarea>
-                </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
-                {loading ? "Sending..." : "Send message"}
+                  {errors.message && (
+  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+)}
 
-                </button>
+                </div>
+            <button
+  disabled={loading}
+  className={`w-full p-4 mt-4 text-gray-100 ${
+    loading ? "opacity-60 cursor-not-allowed" : ""
+  }`}
+>
+  {loading ? "Sending..." : "Send message"}
+</button>
+
               </form>
             </div>
           </div>
